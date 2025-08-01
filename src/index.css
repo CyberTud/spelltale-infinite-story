@@ -10,28 +10,28 @@ All colors MUST be HSL.
   :root {
     /* Spelltale Mystical Theme */
     --background: 220 15% 8%;
-    --foreground: 45 90% 88%;
+    --foreground: 45 20% 95%;
 
     --card: 220 20% 12%;
-    --card-foreground: 45 85% 90%;
+    --card-foreground: 45 15% 90%;
 
     --popover: 220 25% 10%;
-    --popover-foreground: 45 90% 92%;
+    --popover-foreground: 45 20% 92%;
 
     --primary: 280 85% 60%;
-    --primary-foreground: 45 95% 95%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 220 30% 18%;
-    --secondary-foreground: 45 80% 85%;
+    --secondary-foreground: 45 20% 85%;
 
     --muted: 220 25% 15%;
-    --muted-foreground: 45 60% 70%;
+    --muted-foreground: 45 15% 70%;
 
-    --accent: 45 95% 75%;
+    --accent: 45 85% 65%;
     --accent-foreground: 220 40% 15%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 45 95% 95%;
+    --destructive-foreground: 0 0% 100%;
 
     --border: 220 30% 20%;
     --input: 220 25% 15%;
@@ -42,26 +42,36 @@ All colors MUST be HSL.
     /* Spelltale Custom Colors */
     --mystical-purple: 280 85% 60%;
     --mystical-purple-dark: 280 70% 35%;
-    --golden-amber: 45 95% 75%;
-    --golden-amber-dark: 45 85% 55%;
+    --golden-amber: 45 85% 65%;
+    --golden-amber-dark: 45 75% 45%;
     --midnight-blue: 220 40% 15%;
-    --parchment: 45 60% 92%;
-    --ink-dark: 220 50% 8%;
+    --parchment: 45 30% 94%;
+    --ink-dark: 220 30% 12%;
 
     /* Magical Gradients */
     --gradient-mystical: linear-gradient(135deg, hsl(280, 85%, 60%), hsl(260, 80%, 45%));
-    --gradient-golden: linear-gradient(135deg, hsl(45, 95%, 75%), hsl(35, 85%, 65%));
-    --gradient-page: linear-gradient(180deg, hsl(45, 60%, 96%), hsl(45, 40%, 90%));
-    --gradient-book: linear-gradient(145deg, hsl(220, 20%, 12%), hsl(220, 30%, 18%));
+    --gradient-golden: linear-gradient(135deg, hsl(45, 85%, 65%), hsl(35, 75%, 55%));
+    --gradient-page: linear-gradient(180deg, hsl(45, 30%, 96%), hsl(45, 25%, 92%));
+    --gradient-book: linear-gradient(145deg, hsl(220, 20%, 8%), hsl(220, 25%, 12%));
 
     /* Magical Shadows */
     --shadow-mystical: 0 0 30px hsl(280, 85%, 60% / 0.3);
-    --shadow-golden: 0 0 20px hsl(45, 95%, 75% / 0.4);
+    --shadow-golden: 0 0 20px hsl(45, 85%, 65% / 0.4);
     --shadow-book: 0 15px 40px hsl(220, 50%, 5% / 0.6);
 
     /* Smooth Transitions */
     --transition-magical: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-page: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 45 20% 90%;
+    --sidebar-primary: 280 85% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 30% 15%;
+    --sidebar-accent-foreground: 45 20% 85%;
+    --sidebar-border: 220 30% 20%;
+    --sidebar-ring: 280 85% 60%;
+  }
 
     --sidebar-background: 0 0% 98%;
 

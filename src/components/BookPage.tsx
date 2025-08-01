@@ -54,7 +54,7 @@ export const BookPage = ({ content, isGenerating, onNeedMoreContent, pageNumber 
 
           {/* Content */}
           <div className="prose prose-lg prose-slate max-w-none">
-            <div className="text-midnight-blue leading-relaxed text-justify font-serif whitespace-pre-wrap">
+            <div className="text-ink-dark leading-relaxed text-justify font-serif whitespace-pre-wrap" style={{ color: 'hsl(220, 30%, 12%)' }}>
               {visibleContent}
               {currentIndex < content.length && (
                 <span className="animate-pulse text-mystical">|</span>
