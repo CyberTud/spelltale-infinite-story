@@ -8,35 +8,60 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Spelltale Mystical Theme */
+    --background: 220 15% 8%;
+    --foreground: 45 90% 88%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 20% 12%;
+    --card-foreground: 45 85% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 45 90% 92%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 280 85% 60%;
+    --primary-foreground: 45 95% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 30% 18%;
+    --secondary-foreground: 45 80% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 25% 15%;
+    --muted-foreground: 45 60% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 95% 75%;
+    --accent-foreground: 220 40% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 45 95% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 30% 20%;
+    --input: 220 25% 15%;
+    --ring: 280 85% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Spelltale Custom Colors */
+    --mystical-purple: 280 85% 60%;
+    --mystical-purple-dark: 280 70% 35%;
+    --golden-amber: 45 95% 75%;
+    --golden-amber-dark: 45 85% 55%;
+    --midnight-blue: 220 40% 15%;
+    --parchment: 45 60% 92%;
+    --ink-dark: 220 50% 8%;
+
+    /* Magical Gradients */
+    --gradient-mystical: linear-gradient(135deg, hsl(280, 85%, 60%), hsl(260, 80%, 45%));
+    --gradient-golden: linear-gradient(135deg, hsl(45, 95%, 75%), hsl(35, 85%, 65%));
+    --gradient-page: linear-gradient(180deg, hsl(45, 60%, 96%), hsl(45, 40%, 90%));
+    --gradient-book: linear-gradient(145deg, hsl(220, 20%, 12%), hsl(220, 30%, 18%));
+
+    /* Magical Shadows */
+    --shadow-mystical: 0 0 30px hsl(280, 85%, 60% / 0.3);
+    --shadow-golden: 0 0 20px hsl(45, 95%, 75% / 0.4);
+    --shadow-book: 0 15px 40px hsl(220, 50%, 5% / 0.6);
+
+    /* Smooth Transitions */
+    --transition-magical: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-page: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +125,75 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-serif;
+    background: var(--gradient-book);
+    min-height: 100vh;
+  }
+
+  /* Custom scrollbar for magical feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: var(--radius);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--gradient-mystical);
+    border-radius: var(--radius);
+    transition: var(--transition-magical);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    box-shadow: var(--shadow-mystical);
+  }
+}
+
+@layer components {
+  /* Magical text effects */
+  .text-mystical {
+    background: var(--gradient-mystical);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-golden {
+    background: var(--gradient-golden);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Magical glow effects */
+  .glow-mystical {
+    box-shadow: var(--shadow-mystical);
+  }
+  
+  .glow-golden {
+    box-shadow: var(--shadow-golden);
+  }
+
+  /* Page animation */
+  .page-turn {
+    transform-origin: left center;
+    transition: var(--transition-page);
+  }
+  
+  .page-turn.turning {
+    transform: rotateY(-180deg);
+  }
+
+  /* Magical button hover effects */
+  .btn-mystical {
+    background: var(--gradient-mystical);
+    transition: var(--transition-magical);
+  }
+  
+  .btn-mystical:hover {
+    box-shadow: var(--shadow-mystical);
+    transform: translateY(-2px);
   }
 }
