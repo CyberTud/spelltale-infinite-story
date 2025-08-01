@@ -132,6 +132,7 @@ const Index = () => {
           onClick={generateNewChapter}
           disabled={isGenerating}
           className="btn-mystical text-primary-foreground px-6 py-3 rounded-full shadow-book hover:shadow-mystical transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          aria-label={isGenerating ? "Generating new chapter" : "Generate new chapter"}
         >
           {isGenerating ? "Weaving..." : "New Chapter"}
         </button>

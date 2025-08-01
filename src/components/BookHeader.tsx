@@ -17,8 +17,9 @@ export const BookHeader = ({ onMenuClick, currentChapter, title }: BookHeaderPro
             size="icon"
             onClick={onMenuClick}
             className="text-mystical hover:bg-mystical/10"
+            aria-label="Open chapter menu"
           >
-            <Menu className="h-5 w-5" />
+            <Menu className="h-5 w-5" aria-hidden="true" />
           </Button>
           <div className="flex items-center space-x-2">
             <BookOpen className="h-6 w-6 text-mystical animate-float" />
