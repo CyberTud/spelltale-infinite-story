@@ -1,6 +1,6 @@
 import { BookOpen, Sparkles, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { AuthDialog } from "./AuthDialog";
 interface BookHeaderProps {
   onMenuClick: () => void;
   currentChapter: number;
@@ -27,15 +27,14 @@ export const BookHeader = ({ onMenuClick, currentChapter, title }: BookHeaderPro
           </div>
         </div>
         
-        <div className="flex items-center space-x-3">
-          <div className="text-sm text-muted-foreground">
-            Chapter {currentChapter}
+          <div className="flex items-center space-x-3">
+            <AuthDialog />
+            <div className="text-sm text-muted-foreground">Chapter {currentChapter}</div>
+            <div className="flex items-center space-x-1 text-golden">
+              <Sparkles className="h-4 w-4 animate-magical-glow" />
+              <span className="text-xs font-medium">AI Writing</span>
+            </div>
           </div>
-          <div className="flex items-center space-x-1 text-golden">
-            <Sparkles className="h-4 w-4 animate-magical-glow" />
-            <span className="text-xs font-medium">AI Writing</span>
-          </div>
-        </div>
       </div>
     </header>
   );
