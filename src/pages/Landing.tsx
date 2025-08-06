@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Sparkles, BookOpen, Wand2, Share2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { BookPreview } from "@/components/BookPreview";
 
 const Landing = () => {
   return (
@@ -79,13 +80,9 @@ const Landing = () => {
             <CardTitle>See the vibe</CardTitle>
           </CardHeader>
           <CardContent>
-            <img
-              src="/lovable-uploads/6a3797fd-2225-4da7-826a-a035b2e7bd90.png"
-              alt="Spelltale preview badge with a purple crystal logo"
-              className="mx-auto h-40 w-40 object-contain"
-            />
+            <BookPreview />
             <p className="mt-6 text-center text-sm text-muted-foreground">
-              Ready to begin? Click Start Reading to step into your story.
+              This is a live excerpt. Want more? Click Start Reading to step into your story.
             </p>
           </CardContent>
         </Card>
